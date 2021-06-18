@@ -1,0 +1,68 @@
+﻿@model Tarea3_Bandas_Musicales.Models.Bandas_Musicales
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<h1>Eliminar</h1>
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="#">Bandas Musicales</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Eliminar</li>
+    </ol>
+</nav>
+@*<h3>¿Esta seguro de eliminar este registro?</h3>*@
+
+
+<div>
+    <h4>Banda</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BandaM_Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BandaM_Name)
+        </dd>
+    </dl>
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BandaM_Musical_Genre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BandaM_Musical_Genre)
+        </dd>
+    </dl>
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BandaM_YearOfCreation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BandaM_YearOfCreation)
+        </dd>
+    </dl>
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BandaM_Country)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BandaM_Country)
+        </dd>
+    </dl>
+</div>
+<div class="alert alert-danger" role="alert">
+    ¿Esta seguro de eliminar este registro?
+</div>
+<div>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="BandaM_Id" />
+        <input type="submit" class="btn btn-danger" value="Eliminar" />
+        <a asp-action="Index" class="btn btn-success">Regresar</a>
+
+    </form>
+</div>
